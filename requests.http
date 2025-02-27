@@ -1,0 +1,71 @@
+### POST /auth/login login
+POST http://localhost:8082/auth/login
+Content-Type: application/x-www-form-urlencoded
+
+username=henbran
+
+### Get /transactions list all transactions
+GET  http://localhost:8082/transactions?page=0&size=1000&sort=amount,desc
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+
+### Get /transactions/{id} get transaction by id=1
+GET http://localhost:8082/transactions/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+### Get /transactions/{id} get transaction by id=7
+GET http://localhost:8082/transactions/4687
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+### Get /transactions/{id} get transaction by id=20
+GET http://localhost:8082/transactions/2056
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+
+### POST /transactions create a transaction
+
+POST http://localhost:8082/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "amount": 545747.00,
+    "currency": "USD",
+    "transactionDate": "2025-02-13T10:00:00",
+    "location": "New York",
+    "status": "COMPLETED",
+    "isFraud": false
+}
+
+### DELETE /transactions/{id} delete a transaction by id=20
+DELETE http://localhost:8082/transactions/20
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+
+### GET /transactions/filter get transactions by filter
+GET http://localhost:8082/transactions/filter?page=0&size=100&location=Singapura
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+### GET /transactions/filter get transactions by filter
+GET http://localhost:8082/transactions/filter?page=0&size=100&location=Singapura&amount=300
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+### GET /transactions/filter get transactions by filter
+GET http://localhost:8082/transactions/filter?location=Singapura&amount=300&page=0&size=134
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+
+### POST /transactions/check-fraud check fraud
+POST http://localhost:8082/transactions/check-fraud
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+Content-Type: application/json
+
+{
+  "id": 4687,
+  "step": 0,
+  "transactionType": "PAYMENT",
+  "amount": 522.91,
+  "initiator": "4657574490191964",
+  "oldBalInitiator": 208468.68,
+  "newBalInitiator": 207945.77,
+  "recipient": "66-0007049",
+  "oldBalRecipient": 606.38,
+  "newBalRecipient": 1129.29,
+  "isFraud": false,
+  "location": "Recife",
+  "transactionDate": "2025-02-21T12:52:50.654341",
+  "currency": "JPY"
+}
