@@ -4,6 +4,11 @@ Content-Type: application/x-www-form-urlencoded
 
 username=henbran
 
+### POST /auth/login login
+POST http://localhost:8082/auth/login
+Content-Type: application/x-www-form-urlencoded
+
+
 ### Get /transactions list all transactions
 GET  http://localhost:8082/transactions?page=0&size=1000&sort=amount,desc
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
