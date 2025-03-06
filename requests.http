@@ -11,7 +11,7 @@ Content-Type: application/x-www-form-urlencoded
 
 ### Get /transactions list all transactions
 GET  http://localhost:8082/transactions?page=0&size=1000&sort=amount,desc
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxMjk0MDQzLCJleHAiOjE3NDEyOTc2NDN9.Iw1hLmpNwLu15S5ZzLLm6HgtVhaZ5AdZpHrXk9aFYyc
 
 ### Get /transactions/{id} get transaction by id=1
 GET http://localhost:8082/transactions/1
@@ -73,4 +73,20 @@ Content-Type: application/json
   "location": "Recife",
   "transactionDate": "2025-02-21T12:52:50.654341",
   "currency": "JPY"
+}
+
+### POST /users/register register a user
+POST http://localhost:8082/user/register
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxMjk0MDQzLCJleHAiOjE3NDEyOTc2NDN9.Iw1hLmpNwLu15S5ZzLLm6HgtVhaZ5AdZpHrXk9aFYyc
+Content-Type: application/json
+
+{
+    "username": "henbran",
+    "password": "12345678",
+    "email": "henbran@gmail.com",
+    "firstName": "Henrique",
+    "lastName": "Bran",
+    "phoneNumber": "081234567890",
+    "address": "Jl. Raya Kebon Jeruk No. 27, Jakarta Barat",
+    "city": "Jakarta"
 }
