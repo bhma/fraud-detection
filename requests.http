@@ -2,7 +2,7 @@
 POST http://localhost:8082/auth/login
 Content-Type: application/x-www-form-urlencoded
 
-username=henbran
+username=henbran&password=12345678
 
 ### POST /auth/login login
 POST http://localhost:8082/auth/login
@@ -11,11 +11,11 @@ Content-Type: application/x-www-form-urlencoded
 
 ### Get /transactions list all transactions
 GET  http://localhost:8082/transactions?page=0&size=1000&sort=amount,desc
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxMjk0MDQzLCJleHAiOjE3NDEyOTc2NDN9.Iw1hLmpNwLu15S5ZzLLm6HgtVhaZ5AdZpHrXk9aFYyc
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzAyNjgzLCJleHAiOjE3NDE3MDYyODN9.uoxoKPwLAY0-B5Tnbrbxu8RK7Pm2iyp4YJcChiX1Gro
 
 ### Get /transactions/{id} get transaction by id=1
 GET http://localhost:8082/transactions/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzAyNjgzLCJleHAiOjE3NDE3MDYyODN9.uoxoKPwLAY0-B5Tnbrbxu8RK7Pm2iyp4YJcChiX1Gro
 ### Get /transactions/{id} get transaction by id=7
 GET http://localhost:8082/transactions/4687
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
@@ -55,7 +55,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwN
 
 ### POST /transactions/check-fraud check fraud
 POST http://localhost:8082/transactions/check-fraud
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzAyNjgzLCJleHAiOjE3NDE3MDYyODN9.uoxoKPwLAY0-B5Tnbrbxu8RK7Pm2iyp4YJcChiX1Gro
 Content-Type: application/json
 
 {
@@ -76,17 +76,30 @@ Content-Type: application/json
 }
 
 ### POST /users/register register a user
-POST http://localhost:8082/user/register
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxMjk0MDQzLCJleHAiOjE3NDEyOTc2NDN9.Iw1hLmpNwLu15S5ZzLLm6HgtVhaZ5AdZpHrXk9aFYyc
+POST http://localhost:8082/users/register
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzIxODk1LCJleHAiOjE3NDIwODE4OTV9.A75mz1LBLw6tf5pwkZT1RXGIoydw2SSzdIij4SB-IhU
 Content-Type: application/json
 
 {
-    "username": "henbran",
-    "password": "12345678",
-    "email": "henbran@gmail.com",
+    "username": "bhmand",
+    "password": "675849",
+    "email": "bhma@gmail.com",
     "firstName": "Henrique",
     "lastName": "Bran",
     "phoneNumber": "081234567890",
-    "address": "Jl. Raya Kebon Jeruk No. 27, Jakarta Barat",
-    "city": "Jakarta"
+    "address": "Jl. Raya Kebon Jeruk No. 27, Singapura",
+    "city": "Singapura",
+    "active": true
 }
+
+### GET /users list all users
+GET http://localhost:8082/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzIxODk1LCJleHAiOjE3NDIwODE4OTV9.A75mz1LBLw6tf5pwkZT1RXGIoydw2SSzdIij4SB-IhU
+
+### GET /users/{id} get user by id=1
+GET http://localhost:8082/users/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzIxODk1LCJleHAiOjE3NDIwODE4OTV9.A75mz1LBLw6tf5pwkZT1RXGIoydw2SSzdIij4SB-IhU
+
+### DELETE /users/{id} delete a user by id=4
+DELETE http://localhost:8082/users/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzIxODk1LCJleHAiOjE3NDIwODE4OTV9.A75mz1LBLw6tf5pwkZT1RXGIoydw2SSzdIij4SB-IhU

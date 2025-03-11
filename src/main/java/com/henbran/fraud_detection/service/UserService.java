@@ -1,5 +1,7 @@
 package com.henbran.fraud_detection.service;
 
+import java.util.List;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -28,5 +30,27 @@ public class UserService {
 
         // Save the user to the database
         return userRepository.save(user);
+    }
+
+    public User getUserById(Long userId) {
+        return userRepository.findById(userId).orElse(null);
+    }
+
+    public List<User> getAllusers(){
+        return userRepository.findAll();
+    }
+
+    public List<User> getUserByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
+    public String deleteUser(Long userId){
+        User deletingUser = userRepository.findById(userId).orElse(null);
+        if(deletingUser == null){
+            throw new IllegalArgumentException("User not found");
+        }
+        deletingUser.setActive(false);
+        userRepository.save(deletingUser);
+        return "User deleted successfully";
     }
 }

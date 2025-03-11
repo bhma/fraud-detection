@@ -40,6 +40,9 @@ public class User {
     @Column(name = "password", length = 100)
     private String password;
 
+    @Column(name = "is_active", nullable = false, columnDefinition = "boolean default true")
+    private boolean isActive;
+
     // Constructor
     public User(String firstName, String lastName, String email, String phoneNumber, String address, String city, String password) {
         this.firstName = firstName;

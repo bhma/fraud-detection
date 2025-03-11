@@ -63,7 +63,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         return Jwts.builder()
                 .setSubject(username)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60)) // Token válido por 1 hora
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 6000)) // Token válido por 1 hora
                 .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
                 .compact();
     }
