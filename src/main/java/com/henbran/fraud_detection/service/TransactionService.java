@@ -3,6 +3,8 @@ package com.henbran.fraud_detection.service;
 import java.math.BigDecimal;
 import java.util.List;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -20,6 +22,7 @@ public class TransactionService {
         this.transactionRepository = transactionRepository;
     }
 
+    @Cacheable(value = "transactions", key = "#pageable.pageNumber")
     public Page<Transaction> getAllTransactions(Pageable pageable) {
         return transactionRepository.findAll(pageable);
     }
@@ -28,10 +31,12 @@ public class TransactionService {
         return transactionRepository.findById(id).orElse(null);
     }
 
+    @CacheEvict(value = "transactions", allEntries = true)
     public Transaction saveTransaction(Transaction transaction) {
         return transactionRepository.save(transaction);
     }
 
+    @CacheEvict(value = "transactions", allEntries = true)
     public void deleteTransaction(Long id) {
         transactionRepository.deleteById(id);
     }

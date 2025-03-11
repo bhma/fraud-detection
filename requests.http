@@ -11,7 +11,7 @@ Content-Type: application/x-www-form-urlencoded
 
 ### Get /transactions list all transactions
 GET  http://localhost:8082/transactions?page=0&size=1000&sort=amount,desc
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzAyNjgzLCJleHAiOjE3NDE3MDYyODN9.uoxoKPwLAY0-B5Tnbrbxu8RK7Pm2iyp4YJcChiX1Gro
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzI2MjE5LCJleHAiOjE3NDIwODYyMTl9.y9md6X0B-w29OBJ-iMfRCSzXolEwwTMHKzTkBrjaeHw
 
 ### Get /transactions/{id} get transaction by id=1
 GET http://localhost:8082/transactions/1
