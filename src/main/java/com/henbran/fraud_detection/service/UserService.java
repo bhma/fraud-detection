@@ -21,7 +21,7 @@ public class UserService {
 
     public User saveUser(User user) {
         // Check if the username is already taken
-        if (!userRepository.findByUsername(user.getUsername()).isEmpty()) {
+        if (userRepository.findByUsername(user.getUsername()) != null) {
             throw new IllegalArgumentException("Username already taken");
         }
 
@@ -40,7 +40,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public List<User> getUserByUsername(String username) {
+    public User getUserByUsername(String username) {
         return userRepository.findByUsername(username);
     }
 
