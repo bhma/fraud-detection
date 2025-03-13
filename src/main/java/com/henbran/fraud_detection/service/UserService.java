@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.henbran.fraud_detection.entity.User;
 import com.henbran.fraud_detection.repository.UserRepository;
+import com.henbran.fraud_detection.utils.Constants;
 
 @Service
 public class UserService {
@@ -22,7 +23,7 @@ public class UserService {
     public User saveUser(User user) {
         // Check if the username is already taken
         if (userRepository.findByUsername(user.getUsername()) != null) {
-            throw new IllegalArgumentException("Username already taken");
+            throw new IllegalArgumentException(Constants.USERNAME_ALREADY_TAKE_STRING);
         }
 
         // Encode the password
@@ -47,10 +48,17 @@ public class UserService {
     public String deleteUser(Long userId){
         User deletingUser = userRepository.findById(userId).orElse(null);
         if(deletingUser == null){
-            throw new IllegalArgumentException("User not found");
+            throw new IllegalArgumentException(Constants.USER_NOT_FOUND_STRING);
         }
         deletingUser.setActive(false);
         userRepository.save(deletingUser);
-        return "User deleted successfully";
+        return Constants.USER_DELETED_SUCCESSFULY_STRING;
+    }
+    public boolean isUserValid(User user){
+        return 
+            user.getFirstName() != null && 
+            user.getLastName() != null && 
+            user.getUsername() != null && 
+            user.getPassword() != null;
     }
 }

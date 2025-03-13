@@ -22,12 +22,14 @@ public class AuthControllerTest {
 
     @Test
     void loginShouldReturnToken() throws Exception {
-        // Neste teste iremos chamar a rota /auth/login, passando um username.
+        // Neste teste iremos chamar a rota /auth/login, passando um username e password.
         // O endpoint deverá retornar um token JWT (uma string não vazia).
-        String username = "userTest";
+        String username = "henbran";
+        String password = "12345678";
 
         mockMvc.perform(post("/auth/login")
                 .param("username", username)
+                .param("password", password)
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED))
             .andExpect(status().isOk())
             .andExpect(content().string(not(blankOrNullString())));

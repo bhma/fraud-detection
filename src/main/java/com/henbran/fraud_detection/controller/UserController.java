@@ -7,7 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.henbran.fraud_detection.entity.User;
+import com.henbran.fraud_detection.exception.InvalidDataUserException;
 import com.henbran.fraud_detection.service.UserService;
+import com.henbran.fraud_detection.utils.Constants;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,15 +21,21 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 @RequestMapping("/users")
 public class UserController {
+
+    private final AuthController authController;
     
     private final UserService userService;
 
-    public UserController(UserService userService) {
+    public UserController(UserService userService, AuthController authController) {
         this.userService = userService;
+        this.authController = authController;
     }
     
     @PostMapping("/register")
-    public ResponseEntity<User> createUser(@RequestBody User user) {
+    public ResponseEntity<User> createUser(@RequestBody User user) throws InvalidDataUserException {
+        if(!userService.isUserValid(user)){
+            throw new InvalidDataUserException(Constants.INVALID_DATA_USER_STRING);
+        }
         User userCreated = userService.saveUser(user);
         return ResponseEntity.ok(userCreated);
     }
@@ -50,7 +59,10 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteUser(@PathVariable Long id){
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) throws IllegalArgumentException{
+        if(id == null){
+            throw new IllegalArgumentException(Constants.ID_NOT_NULL_STRING);
+        }
         String response = userService.deleteUser(id);
         return ResponseEntity.ok(response);
     }

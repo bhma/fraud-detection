@@ -1,4 +1,4 @@
-package com.henbran.fraud_detection.exception;
+package com.henbran.fraud_detection.exception.handler;
 
 
 import org.springframework.web.bind.annotation.RestControllerAdvice;

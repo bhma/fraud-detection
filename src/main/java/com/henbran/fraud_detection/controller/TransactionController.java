@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.henbran.fraud_detection.entity.Transaction;
 import com.henbran.fraud_detection.service.FraudDetectionService;
 import com.henbran.fraud_detection.service.TransactionService;
+import com.henbran.fraud_detection.utils.Constants;
+
 import lombok.RequiredArgsConstructor;
 import java.util.List;
 
@@ -79,9 +81,9 @@ public class TransactionController {
         boolean isFraudulent = fraudDetectionService.isFraudulent(transaction);
         
         if (isFraudulent) {
-            return ResponseEntity.ok("🚨 Fraude detectada na transação!");
+            return ResponseEntity.ok(Constants.FRAUD_DETECTED_STRING);
         } else {
-            return ResponseEntity.ok("✅ Transação segura.");
+            return ResponseEntity.ok(Constants.SECURE_TRANSACTION_STRING);
         }
     }
     

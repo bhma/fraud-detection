@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.henbran.fraud_detection.config.JwtAuthenticationFilter;
 import com.henbran.fraud_detection.service.UserService;
+import com.henbran.fraud_detection.utils.Constants;
 import com.henbran.fraud_detection.entity.User;
 
 import org.springframework.http.HttpStatus;
@@ -32,8 +33,7 @@ public class AuthController {
     public ResponseEntity<String> login(@RequestParam String username, @RequestParam String password) throws MissingServletRequestParameterException, InvalidAlgorithmParameterException {
         
         if(!checkUsernameAndPassword(username, password)){
-            throw new InvalidAlgorithmParameterException("Usuário ou senha inválidos.");
-            // return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuário ou senha inválidos.");
+            throw new InvalidAlgorithmParameterException(Constants.INVALID_USER_OR_PASSWORD_STRING);
         }
         String token = jwtAuthenticationFilter.generateToken(username);
         return ResponseEntity.ok(token);
