@@ -2,16 +2,19 @@ package com.henbran.fraud_detection.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import com.henbran.fraud_detection.entity.Transaction;
+import com.henbran.fraud_detection.exception.InvalidDataTransactionException;
 import com.henbran.fraud_detection.service.FraudDetectionService;
 import com.henbran.fraud_detection.service.TransactionService;
 import com.henbran.fraud_detection.utils.Constants;
 
 import lombok.RequiredArgsConstructor;
 import java.util.List;
+import java.util.MissingFormatArgumentException;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -67,12 +70,16 @@ public class TransactionController {
 
     @PostMapping
     public ResponseEntity<Transaction> saveTransaction(@RequestBody Transaction transaction) {
+        // Verifica se o transaction é válido
+        if (!transactionService.isTransactionValid(transaction)) {
+            throw new InvalidDataTransactionException();
+        }
         Transaction transactionCreated = transactionService.saveTransaction(transaction);
         return ResponseEntity.ok(transactionCreated);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteTransaction(@PathVariable Long id) {
+    public void deleteTransaction(@PathVariable(required = true) Long id) {
         transactionService.deleteTransaction(id);
     }
 

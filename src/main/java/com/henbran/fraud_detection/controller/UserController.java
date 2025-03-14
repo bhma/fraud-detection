@@ -32,9 +32,9 @@ public class UserController {
     }
     
     @PostMapping("/register")
-    public ResponseEntity<User> createUser(@RequestBody User user) throws InvalidDataUserException {
+    public ResponseEntity<User> createUser(@RequestBody User user) {
         if(!userService.isUserValid(user)){
-            throw new InvalidDataUserException(Constants.INVALID_DATA_USER_STRING);
+            throw new InvalidDataUserException();
         }
         User userCreated = userService.saveUser(user);
         return ResponseEntity.ok(userCreated);
@@ -59,7 +59,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteUser(@PathVariable Long id) throws IllegalArgumentException{
+    public ResponseEntity<String> deleteUser(@PathVariable Long id){
         if(id == null){
             throw new IllegalArgumentException(Constants.ID_NOT_NULL_STRING);
         }

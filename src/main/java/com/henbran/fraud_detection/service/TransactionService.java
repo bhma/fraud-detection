@@ -45,5 +45,15 @@ public class TransactionService {
         return transactionRepository.findByLocationAndAmount(pageable, location == null ? "" : location, amount);
     }
 
+    public boolean isTransactionValid(Transaction transaction){
+        return 
+            transaction.getInitiator() != null && 
+            transaction.getRecipient() != null && 
+            transaction.getAmount() != BigDecimal.ZERO && 
+            transaction.getLocation() != null &&
+            transaction.getTransactionDate() != null &&
+            transaction.getTransactionType() != null;
+    }
+
     
 }
