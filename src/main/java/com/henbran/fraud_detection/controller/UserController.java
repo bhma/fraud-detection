@@ -6,8 +6,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.henbran.fraud_detection.dto.UserDTO;
+import com.henbran.fraud_detection.dto.UserRegistrationDTO;
 import com.henbran.fraud_detection.entity.User;
 import com.henbran.fraud_detection.exception.InvalidDataUserException;
+import com.henbran.fraud_detection.mapper.UserMapper;
 import com.henbran.fraud_detection.service.UserService;
 import com.henbran.fraud_detection.utils.Constants;
 
@@ -32,30 +35,34 @@ public class UserController {
     }
     
     @PostMapping("/register")
-    public ResponseEntity<User> createUser(@RequestBody User user) {
-        if(!userService.isUserValid(user)){
+    public ResponseEntity<UserDTO> createUser(@RequestBody UserRegistrationDTO userRegDTO) {
+        User newUser = UserMapper.fromRegistrationToEntity(userRegDTO);
+        if(!userService.isUserValid(newUser)){
             throw new InvalidDataUserException();
         }
-        User userCreated = userService.saveUser(user);
-        return ResponseEntity.ok(userCreated);
+        User userCreated = userService.saveUser(newUser);
+        UserDTO createdUserDTO = UserMapper.toDTO(userCreated);
+        return ResponseEntity.ok(createdUserDTO);
     }
 
     @GetMapping
-    public ResponseEntity<List<User>> getAllUsers(){
+    public ResponseEntity<List<UserDTO>> getAllUsers(){
         List<User> users = userService.getAllusers();
         if(users.isEmpty()){
             return ResponseEntity.noContent().build();
         }
-        return ResponseEntity.ok(users);
+        List<UserDTO> userDTOList = users.stream().map(UserMapper::toDTO).toList();
+        return ResponseEntity.ok(userDTOList);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Long id){
+    public ResponseEntity<UserDTO> getUserById(@PathVariable Long id){
         User user = userService.getUserById(id);
         if(user == null){
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(user);
+        UserDTO userDTO = UserMapper.toDTO(user);
+        return ResponseEntity.ok(userDTO);
     }
 
     @DeleteMapping("/{id}")
