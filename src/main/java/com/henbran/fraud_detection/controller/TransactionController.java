@@ -1,8 +1,11 @@
 package com.henbran.fraud_detection.controller;
 
 import org.springframework.web.bind.annotation.RestController;
+
+import com.henbran.fraud_detection.dto.TransactionDTO;
 import com.henbran.fraud_detection.entity.Transaction;
 import com.henbran.fraud_detection.exception.InvalidDataTransactionException;
+import com.henbran.fraud_detection.mapper.TransactionMapper;
 import com.henbran.fraud_detection.service.FraudDetectionService;
 import com.henbran.fraud_detection.service.TransactionService;
 import com.henbran.fraud_detection.utils.Constants;
@@ -37,25 +40,27 @@ public class TransactionController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<Transaction>> getAllTransactions(Pageable pageable) {
+    public ResponseEntity<Page<TransactionDTO>> getAllTransactions(Pageable pageable) {
         Page<Transaction> transactions = transactionService.getAllTransactions(pageable);
         if (transactions.isEmpty()) {
             return ResponseEntity.noContent().build(); // Retorna 204 No Found se não encontrar nada
         }
-        return ResponseEntity.ok(transactions);
+        Page<TransactionDTO> transactionDTOList = transactions.map(TransactionMapper::toDTO);
+        return ResponseEntity.ok(transactionDTOList);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Transaction> getTransactionById(@PathVariable Long id) {
+    public ResponseEntity<TransactionDTO> getTransactionById(@PathVariable Long id) {
         Transaction transaction = transactionService.getTransactionById(id);
         if(transaction == null) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(transaction);
+        TransactionDTO transactionDTO = TransactionMapper.toDTO(transaction);
+        return ResponseEntity.ok(transactionDTO);
     }
 
     @GetMapping("/filter")
-    public ResponseEntity<Page<Transaction>> filterTransactions(
+    public ResponseEntity<Page<TransactionDTO>> filterTransactions(
             Pageable pageable,
             @RequestParam(required = false) String location,
             @RequestParam(required = false) Double amount) {
@@ -65,17 +70,19 @@ public class TransactionController {
             return ResponseEntity.noContent().build(); // Retorna 204 No Content se não encontrar nada
 
         }
-        return ResponseEntity.ok(filteredTransactions);
+        Page<TransactionDTO> filtredTransactionsDTO = filteredTransactions.map(TransactionMapper::toDTO);
+        return ResponseEntity.ok(filtredTransactionsDTO);
     }
 
     @PostMapping
-    public ResponseEntity<Transaction> saveTransaction(@RequestBody Transaction transaction) {
+    public ResponseEntity<TransactionDTO> saveTransaction(@RequestBody Transaction transaction) {
         // Verifica se o transaction é válido
         if (!transactionService.isTransactionValid(transaction)) {
             throw new InvalidDataTransactionException();
         }
         Transaction transactionCreated = transactionService.saveTransaction(transaction);
-        return ResponseEntity.ok(transactionCreated);
+        TransactionDTO transactionCreatedDTO = TransactionMapper.toDTO(transactionCreated);
+        return ResponseEntity.ok(transactionCreatedDTO);
     }
 
     @DeleteMapping("/{id}")
