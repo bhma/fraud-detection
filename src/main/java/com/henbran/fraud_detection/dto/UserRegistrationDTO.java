@@ -1,5 +1,10 @@
 package com.henbran.fraud_detection.dto;
 
+import java.util.List;
+import java.util.Set;
+
+import com.henbran.fraud_detection.entity.Role;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,4 +22,5 @@ public class UserRegistrationDTO {
     private String username;
     private String password;
     private boolean isActive;
+    private Set<Role> roles;
 }

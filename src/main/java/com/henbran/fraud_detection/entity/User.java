@@ -1,5 +1,11 @@
 package com.henbran.fraud_detection.entity;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +17,14 @@ import lombok.Setter;
 @Setter 
 @RequiredArgsConstructor
 public class User {
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+        name = "user_role",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private Set<Role> app_role = new HashSet<>();
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,6 +57,7 @@ public class User {
     @Column(name = "is_active", nullable = false, columnDefinition = "boolean default true")
     private boolean isActive;
 
+    
     // Constructor
     public User(String firstName, String lastName, String email, String phoneNumber, String address, String city, String password) {
         this.firstName = firstName;

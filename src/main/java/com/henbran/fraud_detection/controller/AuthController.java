@@ -8,6 +8,7 @@ import com.henbran.fraud_detection.service.UserService;
 import com.henbran.fraud_detection.utils.Constants;
 import com.henbran.fraud_detection.entity.User;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,7 @@ public class AuthController {
     private final UserService userService;
     private final PasswordEncoder passwordEncoder;
 
+    
     public AuthController(JwtAuthenticationFilter jwtAuthenticationFilter, UserService userService, PasswordEncoder passwordEncoder) {
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
         this.userService = userService;

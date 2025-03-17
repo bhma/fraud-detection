@@ -10,12 +10,12 @@ Content-Type: application/x-www-form-urlencoded
 
 
 ### Get /transactions list all transactions
-GET  http://localhost:8082/transactions?page=0&size=1000&sort=amount,desc
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzI2MjE5LCJleHAiOjE3NDIwODYyMTl9.y9md6X0B-w29OBJ-iMfRCSzXolEwwTMHKzTkBrjaeHw
+GET  http://localhost:8082/transactions?page=0&size=100
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMDU5MjQzLCJleHAiOjE3NDI0MTkyNDN9.elKZxXYNjl0dokTX0CFz3Pxu8BsHdKlHMdMO1Hm3_94
 
 ### Get /transactions/{id} get transaction by id=1
 GET http://localhost:8082/transactions/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzAyNjgzLCJleHAiOjE3NDE3MDYyODN9.uoxoKPwLAY0-B5Tnbrbxu8RK7Pm2iyp4YJcChiX1Gro
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMDU5MjQzLCJleHAiOjE3NDI0MTkyNDN9.elKZxXYNjl0dokTX0CFz3Pxu8BsHdKlHMdMO1Hm3_94
 ### Get /transactions/{id} get transaction by id=7
 GET http://localhost:8082/transactions/4687
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
@@ -26,26 +26,33 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwN
 ### POST /transactions create a transaction
 
 POST http://localhost:8082/transactions
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMDU5MjQzLCJleHAiOjE3NDI0MTkyNDN9.elKZxXYNjl0dokTX0CFz3Pxu8BsHdKlHMdMO1Hm3_94
 Content-Type: application/json
 
 {
-    "userId": 1,
-    "amount": 545747.00,
-    "currency": "USD",
-    "transactionDate": "2025-02-13T10:00:00",
-    "location": "New York",
-    "status": "COMPLETED",
-    "isFraud": false
+    "step": 7,
+    "transactionType": "DEPOSIT",
+    "amount": 45899784.31,
+    "initiator": "4300099464671040",
+    "oldBalInitiator" : 45899784.31,
+    "newBalInitiator" : 0,
+    "recipient": "80-0001943",
+    "oldBalRecipient" : 34645746.31,
+    "newBalRecipient" : 80545530.62,
+    "location": "Recife",
+    "transactionDate": "2024-11-17T19:39:20.472276",
+    "currency": "BRL",
+    "fraud": false
 }
 
+
 ### DELETE /transactions/{id} delete a transaction by id=20
-DELETE http://localhost:8082/transactions/20
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+DELETE http://localhost:8082/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxOTY0ODAzLCJleHAiOjE3NDIzMjQ4MDN9.91IF_J4GZ5CsVaTL6in2nNoqvIKuGZlLn7WkSrr1eo8
 
 ### GET /transactions/filter get transactions by filter
 GET http://localhost:8082/transactions/filter?page=0&size=100&location=Singapura
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMDU5MjQzLCJleHAiOjE3NDI0MTkyNDN9.elKZxXYNjl0dokTX0CFz3Pxu8BsHdKlHMdMO1Hm3_94
 ### GET /transactions/filter get transactions by filter
 GET http://localhost:8082/transactions/filter?page=0&size=100&location=Singapura&amount=300
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
@@ -77,29 +84,48 @@ Content-Type: application/json
 
 ### POST /users/register register a user
 POST http://localhost:8082/users/register
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzIxODk1LCJleHAiOjE3NDIwODE4OTV9.A75mz1LBLw6tf5pwkZT1RXGIoydw2SSzdIij4SB-IhU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMjMzOTQ2LCJleHAiOjE3NDI1OTM5NDZ9._gkt-G5l2O87zKUQztj3gVzeXbaZIjrkXfkQ0MIKZIA
 Content-Type: application/json
 
 {
-    "username": "bhmand",
-    "password": "675849",
+    "username": "Zend3",
+    "password": "duna2",
     "email": "bhma@gmail.com",
-    "firstName": "Henrique",
-    "lastName": "Bran",
+    "firstName": "Fremen",
+    "lastName": "Zendaya",
     "phoneNumber": "081234567890",
     "address": "Jl. Raya Kebon Jeruk No. 27, Singapura",
-    "city": "Singapura",
-    "active": true
+    "city": "Arrakys",
+    "active": true,
+    "roles": [{
+        "id": 4,
+        "role": "ROLE_ADMIN"
+    }]
 }
 
 ### GET /users list all users
 GET http://localhost:8082/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzIxODk1LCJleHAiOjE3NDIwODE4OTV9.A75mz1LBLw6tf5pwkZT1RXGIoydw2SSzdIij4SB-IhU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMjM0ODEyLCJleHAiOjE3NDI1OTQ4MTJ9.0DqS5qIgs2mNOUF04Ex7tzv-Gzlgq2IdMBZq_RKwv0E
 
 ### GET /users/{id} get user by id=1
 GET http://localhost:8082/users/4
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzIxODk1LCJleHAiOjE3NDIwODE4OTV9.A75mz1LBLw6tf5pwkZT1RXGIoydw2SSzdIij4SB-IhU
 
 ### DELETE /users/{id} delete a user by id=4
-DELETE http://localhost:8082/users/4
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzIxODk1LCJleHAiOjE3NDIwODE4OTV9.A75mz1LBLw6tf5pwkZT1RXGIoydw2SSzdIij4SB-IhU
+DELETE http://localhost:8082/users/0
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxOTY1MDQ3LCJleHAiOjE3NDIzMjUwNDd9.1WcWdyF-mFpU2EQZte0Cm-H5kQ8yaNhxFV_iHHAirR0
+
+
+### GET /roles list all roles
+GET http://localhost:8082/roles
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMjM0ODEyLCJleHAiOjE3NDI1OTQ4MTJ9.0DqS5qIgs2mNOUF04Ex7tzv-Gzlgq2IdMBZq_RKwv0E
+
+
+### POST /roles/register create a role
+POST http://localhost:8082/roles/register
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMjMyODM5LCJleHAiOjE3NDI1OTI4Mzl9.XtCABs5p1ro3hbQgSxDoZcslzIKUABIqV5lslEJ9Vmc
+Content-Type: application/json
+
+{
+    "name": "ROLE_ADMIN"
+}

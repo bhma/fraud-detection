@@ -51,6 +51,7 @@ public class UserMapper {
         user.setUsername(userRegistrationDTO.getUsername());
         user.setPassword(userRegistrationDTO.getPassword());
         user.setActive(userRegistrationDTO.isActive());
+        user.setApp_role(userRegistrationDTO.getRoles());
         return user;
     }
 }
