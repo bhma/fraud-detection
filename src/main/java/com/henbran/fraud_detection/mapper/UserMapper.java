@@ -10,15 +10,7 @@ public class UserMapper {
 
         if(user == null) return null;
 
-        UserDTO dto = new UserDTO();
-        dto.setId(user.getId());
-        dto.setFirstName(user.getFirstName());
-        dto.setLastName(user.getLastName());
-        dto.setEmail(user.getEmail());
-        dto.setPhoneNumber(user.getPhoneNumber());
-        dto.setAddress(user.getAddress());
-        dto.setCity(user.getCity());
-        dto.setUsername(user.getUsername());
+        UserDTO dto = new UserDTO(user.getId(), user.getFirstName(), user.getLastName(), user.getEmail(), user.getPhoneNumber(), user.getAddress(), user.getCity(), user.getUsername());
         return dto;
     }
 
@@ -26,14 +18,14 @@ public class UserMapper {
         if(dto == null) return null;
 
         User user = new User();
-        user.setId(dto.getId());
-        user.setFirstName(dto.getFirstName());
-        user.setLastName(dto.getLastName());
-        user.setEmail(dto.getEmail());
-        user.setPhoneNumber(dto.getPhoneNumber());
-        user.setAddress(dto.getAddress());
-        user.setCity(dto.getCity());
-        user.setUsername(dto.getUsername());
+        user.setId(dto.id());
+        user.setFirstName(dto.firstName());
+        user.setLastName(dto.lastName());
+        user.setEmail(dto.email());
+        user.setPhoneNumber(dto.phoneNumber());
+        user.setAddress(dto.address());
+        user.setCity(dto.city());
+        user.setUsername(dto.username());
         return user;
     }
     public static User fromRegistrationToEntity(UserRegistrationDTO userRegistrationDTO) {
@@ -41,17 +33,16 @@ public class UserMapper {
             return null;
         }
         User user = new User();
-        user.setId(userRegistrationDTO.getId());
-        user.setFirstName(userRegistrationDTO.getFirstName());
-        user.setLastName(userRegistrationDTO.getLastName());
-        user.setEmail(userRegistrationDTO.getEmail());
-        user.setPhoneNumber(userRegistrationDTO.getPhoneNumber());
-        user.setAddress(userRegistrationDTO.getAddress());
-        user.setCity(userRegistrationDTO.getCity());
-        user.setUsername(userRegistrationDTO.getUsername());
-        user.setPassword(userRegistrationDTO.getPassword());
+        user.setId(userRegistrationDTO.id());
+        user.setFirstName(userRegistrationDTO.firstName());
+        user.setLastName(userRegistrationDTO.lastName());
+        user.setEmail(userRegistrationDTO.email());
+        user.setPhoneNumber(userRegistrationDTO.phoneNumber());
+        user.setAddress(userRegistrationDTO.address());
+        user.setCity(userRegistrationDTO.city());
+        user.setUsername(userRegistrationDTO.username());
+        user.setPassword(userRegistrationDTO.password());
         user.setActive(userRegistrationDTO.isActive());
-        user.setApp_role(userRegistrationDTO.getRoles());
         return user;
     }
 }

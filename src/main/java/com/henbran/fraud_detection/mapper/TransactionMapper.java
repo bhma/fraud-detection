@@ -8,17 +8,7 @@ public class TransactionMapper {
     public static TransactionDTO toDTO(Transaction transaction){
         if(transaction == null) return null;
 
-        TransactionDTO transactionDTO = new TransactionDTO();
-        transactionDTO.setId(transaction.getId());
-        transactionDTO.setAmount(transaction.getAmount());
-        transactionDTO.setCurrency(transaction.getCurrency());
-        transactionDTO.setFraud(transaction.isFraud());
-        transactionDTO.setInitiator(transaction.getInitiator());
-        transactionDTO.setLocation(transaction.getLocation());
-        transactionDTO.setRecipient(transaction.getRecipient());
-        transactionDTO.setStep(transaction.getStep());
-        transactionDTO.setTransactionDate(transaction.getTransactionDate());
-        transactionDTO.setTransactionType(transaction.getTransactionType());
+        TransactionDTO transactionDTO = new TransactionDTO(transaction.getId(), transaction.getStep(), transaction.getTransactionType(), transaction.getAmount(), transaction.getInitiator(), transaction.getRecipient(), transaction.isFraud(), transaction.getLocation(), transaction.getTransactionDate(), transaction.getCurrency());
 
         return transactionDTO;
     }
@@ -27,16 +17,16 @@ public class TransactionMapper {
         if(transactionDTO == null) return null;
 
         Transaction transaction = new Transaction();
-        transaction.setId(transactionDTO.getId());
-        transaction.setAmount(transactionDTO.getAmount());
-        transaction.setCurrency(transactionDTO.getCurrency());
+        transaction.setId(transactionDTO.id());
+        transaction.setAmount(transactionDTO.amount());
+        transaction.setCurrency(transactionDTO.currency());
         transaction.setFraud(transactionDTO.isFraud());
-        transaction.setInitiator(transactionDTO.getInitiator());
-        transaction.setLocation(transactionDTO.getLocation());
-        transaction.setRecipient(transactionDTO.getRecipient());
-        transaction.setStep(transactionDTO.getStep());
-        transaction.setTransactionDate(transactionDTO.getTransactionDate());
-        transaction.setTransactionType(transactionDTO.getTransactionType());
+        transaction.setInitiator(transactionDTO.initiator());
+        transaction.setLocation(transactionDTO.location());
+        transaction.setRecipient(transactionDTO.recipient());
+        transaction.setStep(transactionDTO.step());
+        transaction.setTransactionDate(transactionDTO.transactionDate());
+        transaction.setTransactionType(transactionDTO.transactionType());
         return transaction;
     }
 }

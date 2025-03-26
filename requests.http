@@ -2,7 +2,7 @@
 POST http://localhost:8082/auth/login
 Content-Type: application/x-www-form-urlencoded
 
-username=henbran&password=12345678
+username=Zend3&password=duna2
 
 ### POST /auth/login login
 POST http://localhost:8082/auth/login
@@ -11,22 +11,22 @@ Content-Type: application/x-www-form-urlencoded
 
 ### Get /transactions list all transactions
 GET  http://localhost:8082/transactions?page=0&size=100
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMDU5MjQzLCJleHAiOjE3NDI0MTkyNDN9.elKZxXYNjl0dokTX0CFz3Pxu8BsHdKlHMdMO1Hm3_94
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaZW5kMyIsImlhdCI6MTc0MzAzMDkxMiwiZXhwIjoxNzQzMDMxNTEyfQ.7cBCdghd7HGWFo71N93hG5yZEszWRgXQzFDKQNyzTbE
 
 ### Get /transactions/{id} get transaction by id=1
 GET http://localhost:8082/transactions/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMDU5MjQzLCJleHAiOjE3NDI0MTkyNDN9.elKZxXYNjl0dokTX0CFz3Pxu8BsHdKlHMdMO1Hm3_94
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaZW5kMyIsImlhdCI6MTc0MzAzMDkxMiwiZXhwIjoxNzQzMDMxNTEyfQ.7cBCdghd7HGWFo71N93hG5yZEszWRgXQzFDKQNyzTbE
 ### Get /transactions/{id} get transaction by id=7
 GET http://localhost:8082/transactions/4687
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
 ### Get /transactions/{id} get transaction by id=20
 GET http://localhost:8082/transactions/2056
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaZW5kMyIsImlhdCI6MTc0MjI0MDEwMSwiZXhwIjoxNzQyNjAwMTAxfQ.bm8EyUhvcL35RPQjR5-DkuiqqCEBRYSzsMCpJvJJKRE
 
 ### POST /transactions create a transaction
 
 POST http://localhost:8082/transactions
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMDU5MjQzLCJleHAiOjE3NDI0MTkyNDN9.elKZxXYNjl0dokTX0CFz3Pxu8BsHdKlHMdMO1Hm3_94
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaZW5kMyIsImlhdCI6MTc0MjI0MDYxMywiZXhwIjoxNzQyNjAwNjEzfQ.4gTDI8iHjWb9XRIRUyIdNtt2_AXUbltz6kj-PgVD6qg
 Content-Type: application/json
 
 {
@@ -40,8 +40,8 @@ Content-Type: application/json
     "oldBalRecipient" : 34645746.31,
     "newBalRecipient" : 80545530.62,
     "location": "Recife",
-    "transactionDate": "2024-11-17T19:39:20.472276",
-    "currency": "BRL",
+    "transactionDate": "2024-01-20T19:39:20.472276",
+    "currency": "USD",
     "fraud": false
 }
 
@@ -84,28 +84,24 @@ Content-Type: application/json
 
 ### POST /users/register register a user
 POST http://localhost:8082/users/register
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMjMzOTQ2LCJleHAiOjE3NDI1OTM5NDZ9._gkt-G5l2O87zKUQztj3gVzeXbaZIjrkXfkQ0MIKZIA
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaZW5kMyIsImlhdCI6MTc0MzAzMTQ2NiwiZXhwIjoxNzQzMDMyMDY2fQ.LYsITCETO0GrKsswmMcPEA5lmSTTr5RrG5YU29WjsEY
 Content-Type: application/json
 
 {
-    "username": "Zend3",
-    "password": "duna2",
-    "email": "bhma@gmail.com",
-    "firstName": "Fremen",
-    "lastName": "Zendaya",
+    "username": "ant",
+    "password": "anto",
+    "email": "anto@gmail.com",
+    "firstName": "Antonio",
+    "lastName": "Vieira",
     "phoneNumber": "081234567890",
     "address": "Jl. Raya Kebon Jeruk No. 27, Singapura",
     "city": "Arrakys",
-    "active": true,
-    "roles": [{
-        "id": 4,
-        "role": "ROLE_ADMIN"
-    }]
+    "active": true
 }
 
 ### GET /users list all users
 GET http://localhost:8082/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMjM0ODEyLCJleHAiOjE3NDI1OTQ4MTJ9.0DqS5qIgs2mNOUF04Ex7tzv-Gzlgq2IdMBZq_RKwv0E
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaZW5kMyIsImlhdCI6MTc0MzAzMTQ2NiwiZXhwIjoxNzQzMDMyMDY2fQ.LYsITCETO0GrKsswmMcPEA5lmSTTr5RrG5YU29WjsEY
 
 ### GET /users/{id} get user by id=1
 GET http://localhost:8082/users/4
@@ -115,17 +111,3 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxN
 DELETE http://localhost:8082/users/0
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxOTY1MDQ3LCJleHAiOjE3NDIzMjUwNDd9.1WcWdyF-mFpU2EQZte0Cm-H5kQ8yaNhxFV_iHHAirR0
 
-
-### GET /roles list all roles
-GET http://localhost:8082/roles
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMjM0ODEyLCJleHAiOjE3NDI1OTQ4MTJ9.0DqS5qIgs2mNOUF04Ex7tzv-Gzlgq2IdMBZq_RKwv0E
-
-
-### POST /roles/register create a role
-POST http://localhost:8082/roles/register
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMjMyODM5LCJleHAiOjE3NDI1OTI4Mzl9.XtCABs5p1ro3hbQgSxDoZcslzIKUABIqV5lslEJ9Vmc
-Content-Type: application/json
-
-{
-    "name": "ROLE_ADMIN"
-}
