@@ -1,0 +1,194 @@
+2025-03-31 16:49:23 - c.h.f.FraudDetectionApplication - Starting FraudDetectionApplication using Java 21.0.6 with PID 38719 (/home/bhman/dev/fraud_detection/target/classes started by bhman in /home/bhman/dev/fraud_detection)
+2025-03-31 16:49:23 - c.h.f.FraudDetectionApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-31 16:49:23 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-31 16:49:23 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-31 16:49:24 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-31 16:49:24 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-31 16:49:24 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 2 JPA repository interfaces.
+2025-03-31 16:49:24 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-31 16:49:24 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-31 16:49:24 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-31 16:49:24 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-31 16:49:24 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2025-03-31 16:49:24 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-03-31 16:49:24 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2025-03-31 16:49:24 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-31 16:49:24 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-31 16:49:24 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-31 16:49:24 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1323 ms
+2025-03-31 16:49:25 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-31 16:49:25 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-03-31 16:49:25 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-31 16:49:25 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-31 16:49:25 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-31 16:49:25 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@48bb73e2
+2025-03-31 16:49:25 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-31 16:49:25 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-31 16:49:25 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-31 16:49:26 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-31 16:49:26 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 16:49:26 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-31 16:49:27 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-31 16:49:27 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 9bac4dc1-5ce0-406f-b1e6-bf2eaf607038
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-31 16:49:27 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-03-31 16:49:27 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-03-31 16:49:27 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-31 16:49:27 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2025-03-31 16:49:27 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2025-03-31 16:49:27 - c.h.f.FraudDetectionApplication - Started FraudDetectionApplication in 4.664 seconds (process running for 5.106)
+2025-03-31 16:49:27 - c.h.f.FraudDetectionApplication - API Fraud Detection iniciada com sucesso!
+2025-03-31 16:49:29 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31 16:49:29 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-31 16:49:29 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-03-31 16:49:47 - c.h.f.controller.AuthController - Iniciando login do úsuario: Zend3
+2025-03-31 16:49:47 - c.h.f.controller.AuthController - Login realizado com sucesso
+2025-03-31 16:50:40 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 16:50:40 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-03-31 16:50:40 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 16:50:40 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-31 16:50:40 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-31 16:50:58 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-31 16:51:00 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-31 16:51:00 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7dc3e480-4702-45cd-a9d0-7655745cf80d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-31 16:52:12 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-31 16:52:12 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-31 16:52:12 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 996f0128-524f-4c09-9f1a-a388af678d38
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-31 16:52:45 - c.h.f.FraudDetectionApplication - Starting FraudDetectionApplication using Java 21.0.6 with PID 39642 (/home/bhman/dev/fraud_detection/target/classes started by bhman in /home/bhman/dev/fraud_detection)
+2025-03-31 16:52:45 - c.h.f.FraudDetectionApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-31 16:52:45 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-31 16:52:45 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-31 16:52:45 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2025-03-31 16:52:45 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-31 16:52:45 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-31 16:52:45 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-31 16:52:45 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-31 16:52:45 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-03-31 16:52:45 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-03-31 16:52:45 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2025-03-31 16:52:45 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-31 16:52:45 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-31 16:52:45 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-31 16:52:45 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 232 ms
+2025-03-31 16:52:45 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-31 16:52:45 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-31 16:52:45 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-31 16:52:45 - com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-03-31 16:52:45 - com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@2b02c392
+2025-03-31 16:52:45 - com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-03-31 16:52:45 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-31 16:52:45 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-31 16:52:45 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-31 16:52:45 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 16:52:45 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-31 16:52:45 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: a454208b-78fd-44c5-8588-abe76022b1be
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-31 16:52:45 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-03-31 16:52:45 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-03-31 16:52:45 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-31 16:52:45 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2025-03-31 16:52:45 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2025-03-31 16:52:45 - c.h.f.FraudDetectionApplication - Started FraudDetectionApplication in 0.706 seconds (process running for 107.307)
+2025-03-31 16:52:45 - o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-31 16:52:45 - c.h.f.FraudDetectionApplication - API Fraud Detection iniciada com sucesso!
+2025-03-31 16:53:07 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 16:53:07 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-03-31 16:53:07 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 16:53:07 - com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-03-31 16:53:07 - com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-03-31 16:56:39 - c.h.f.FraudDetectionApplication - Starting FraudDetectionApplication using Java 21.0.6 with PID 42490 (/home/bhman/dev/fraud_detection/target/classes started by bhman in /home/bhman/dev/fraud_detection)
+2025-03-31 16:56:39 - c.h.f.FraudDetectionApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-31 16:56:39 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-31 16:56:39 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-31 16:56:39 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-31 16:56:39 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-31 16:56:40 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 2 JPA repository interfaces.
+2025-03-31 16:56:40 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-31 16:56:40 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-31 16:56:40 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-31 16:56:40 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-31 16:56:40 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2025-03-31 16:56:40 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-03-31 16:56:40 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2025-03-31 16:56:40 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-31 16:56:40 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-31 16:56:40 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-31 16:56:40 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1348 ms
+2025-03-31 16:56:41 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-31 16:56:41 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-03-31 16:56:41 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-31 16:56:41 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-31 16:56:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-31 16:56:41 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@d8f84e1
+2025-03-31 16:56:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-31 16:56:41 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-31 16:56:41 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-31 16:56:42 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-31 16:56:42 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 16:56:42 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-31 16:56:42 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-31 16:56:43 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 676824fe-bac3-4abb-b25c-bd6ffc72e58e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-31 16:56:43 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-03-31 16:56:43 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-03-31 16:56:43 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-31 16:56:43 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2025-03-31 16:56:43 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2025-03-31 16:56:43 - c.h.f.FraudDetectionApplication - Started FraudDetectionApplication in 4.886 seconds (process running for 5.359)
+2025-03-31 16:56:43 - c.h.f.FraudDetectionApplication - API Fraud Detection iniciada com sucesso!
+2025-03-31 16:56:45 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31 16:56:45 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-31 16:56:45 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-03-31 16:57:29 - c.h.f.controller.AuthController - Iniciando login do úsuario: Zend3
+2025-03-31 16:57:29 - c.h.f.controller.AuthController - Login realizado com sucesso
+2025-03-31 16:58:09 - c.h.f.controller.AuthController - Iniciando login do úsuario: Zed3
+2025-03-31 16:58:09 - c.h.f.controller.AuthController - Úsuario ou senha inválidos
+2025-03-31 16:58:09 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.security.InvalidAlgorithmParameterException: Usuário ou senha inválidos.]
+2025-03-31 16:58:55 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 16:58:55 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-03-31 16:58:55 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-31 16:58:55 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-31 16:58:55 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

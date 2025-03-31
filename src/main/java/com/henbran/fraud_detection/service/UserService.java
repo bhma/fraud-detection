@@ -9,6 +9,9 @@ import com.henbran.fraud_detection.entity.User;
 import com.henbran.fraud_detection.repository.UserRepository;
 import com.henbran.fraud_detection.utils.Constants;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class UserService {
     
@@ -55,6 +58,7 @@ public class UserService {
         return Constants.USER_DELETED_SUCCESSFULY_STRING;
     }
     public boolean isUserValid(User user){
+        log.info("Executando validação de usuário: {}");
         return 
             user.getFirstName() != null && 
             user.getLastName() != null && 

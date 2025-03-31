@@ -14,6 +14,8 @@ import com.henbran.fraud_detection.mapper.UserMapper;
 import com.henbran.fraud_detection.service.UserService;
 import com.henbran.fraud_detection.utils.Constants;
 
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,6 +23,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+@Slf4j
 @Controller
 @RequestMapping("/users")
 public class UserController {
@@ -36,17 +39,21 @@ public class UserController {
     
     @PostMapping("/register")
     public ResponseEntity<UserDTO> createUser(@RequestBody UserRegistrationDTO userRegDTO) {
+        
+        log.info("Criando novo usuário");
         User newUser = UserMapper.fromRegistrationToEntity(userRegDTO);
         if(!userService.isUserValid(newUser)){
             throw new InvalidDataUserException();
         }
         User userCreated = userService.saveUser(newUser);
         UserDTO createdUserDTO = UserMapper.toDTO(userCreated);
+        log.info("Usuário criado com sucesso");
         return ResponseEntity.ok(createdUserDTO);
     }
 
     @GetMapping
     public ResponseEntity<List<UserDTO>> getAllUsers(){
+        log.info("Buscando todos os usuários");
         List<User> users = userService.getAllusers();
         if(users.isEmpty()){
             return ResponseEntity.noContent().build();
@@ -57,6 +64,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     public ResponseEntity<UserDTO> getUserById(@PathVariable Long id){
+        log.info("Buscando usuário com id: {}", id);
         User user = userService.getUserById(id);
         if(user == null){
             return ResponseEntity.notFound().build();
@@ -67,6 +75,7 @@ public class UserController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteUser(@PathVariable Long id){
+        log.info("Deletando usuário com id: {}", id);
         if(id == null){
             throw new IllegalArgumentException(Constants.ID_NOT_NULL_STRING);
         }

@@ -11,6 +11,8 @@ import com.henbran.fraud_detection.service.TransactionService;
 import com.henbran.fraud_detection.utils.Constants;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.List;
 import java.util.MissingFormatArgumentException;
 
@@ -26,6 +28,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+@Slf4j
 @RestController
 @RequestMapping("/transactions")
 // @RequiredArgsConstructor
@@ -41,18 +44,23 @@ public class TransactionController {
 
     @GetMapping
     public ResponseEntity<Page<TransactionDTO>> getAllTransactions(Pageable pageable) {
+        log.info("Buscando todas as transações");
         Page<Transaction> transactions = transactionService.getAllTransactions(pageable);
         if (transactions.isEmpty()) {
+            log.info("Não há transações cadastradas");
             return ResponseEntity.noContent().build(); // Retorna 204 No Found se não encontrar nada
         }
         Page<TransactionDTO> transactionDTOList = transactions.map(TransactionMapper::toDTO);
+
         return ResponseEntity.ok(transactionDTOList);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<TransactionDTO> getTransactionById(@PathVariable Long id) {
+        log.info("Buscando transação com id: {}", id);
         Transaction transaction = transactionService.getTransactionById(id);
         if(transaction == null) {
+            log.info("Transação não encontrada");
             return ResponseEntity.notFound().build();
         }
         TransactionDTO transactionDTO = TransactionMapper.toDTO(transaction);
@@ -76,22 +84,26 @@ public class TransactionController {
 
     @PostMapping
     public ResponseEntity<TransactionDTO> saveTransaction(@RequestBody Transaction transaction) {
+        log.info("Salvando nova transação");
         // Verifica se o transaction é válido
         if (!transactionService.isTransactionValid(transaction)) {
             throw new InvalidDataTransactionException();
         }
         Transaction transactionCreated = transactionService.saveTransaction(transaction);
         TransactionDTO transactionCreatedDTO = TransactionMapper.toDTO(transactionCreated);
+        log.info("Transação salva com sucesso");
         return ResponseEntity.ok(transactionCreatedDTO);
     }
 
     @DeleteMapping("/{id}")
     public void deleteTransaction(@PathVariable(required = true) Long id) {
+        log.info("Deletando transação xom id: {}", id);
         transactionService.deleteTransaction(id);
     }
 
     @PostMapping("/check-fraud")
     public ResponseEntity<String> checkFraud(@RequestBody Transaction transaction) {
+        log.info("Verificando transação com id {}", transaction.getId());
         boolean isFraudulent = fraudDetectionService.isFraudulent(transaction);
         
         if (isFraudulent) {

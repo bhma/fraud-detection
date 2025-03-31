@@ -8,6 +8,10 @@ import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import lombok.extern.slf4j.Slf4j;
+
+
+@Slf4j
 @RestControllerAdvice
 public class AuthExceptionHandler {
     
@@ -23,6 +27,7 @@ public class AuthExceptionHandler {
     @ExceptionHandler(InvalidAlgorithmParameterException.class)
     public ResponseEntity<String> handleInvalidCredentials(InvalidAlgorithmParameterException ex){
         String message = ex.getMessage();
+        log.warn("Úsuario ou senha inválidos");
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(message);
     }
 }

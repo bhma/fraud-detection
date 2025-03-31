@@ -13,7 +13,6 @@ import com.henbran.fraud_detection.repository.TransactionRepository;
 import lombok.RequiredArgsConstructor;
 
 @Service
-// @RequiredArgsConstructor
 public class TransactionService {
 
     private final TransactionRepository transactionRepository;

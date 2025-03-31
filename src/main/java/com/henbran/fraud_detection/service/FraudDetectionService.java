@@ -3,6 +3,8 @@ package com.henbran.fraud_detection.service;
 import com.henbran.fraud_detection.entity.Transaction;
 import com.henbran.fraud_detection.repository.TransactionRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -11,6 +13,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 public class FraudDetectionService {
 
@@ -21,6 +24,7 @@ public class FraudDetectionService {
     }
 
     public Boolean isFraudulent(Transaction transaction) {
+        log.info("Executando detecção de fraude para a transação: {}", transaction.getId());
         return isHighAmount(transaction) ||
                 isHighFrequency(transaction) ||
                 isUnusualLocation(transaction) ||
