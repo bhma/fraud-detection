@@ -2,7 +2,7 @@
 POST http://localhost:8082/auth/login
 Content-Type: application/x-www-form-urlencoded
 
-username=Zed3&password=duna2
+username=Zend3&password=duna2
 
 ### POST /auth/login login
 POST http://localhost:8082/auth/login
@@ -11,7 +11,7 @@ Content-Type: application/x-www-form-urlencoded
 
 ### Get /transactions list all transactions
 GET  http://localhost:8082/transactions?page=0&size=100
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaZW5kMyIsImlhdCI6MTc0MzAzMDkxMiwiZXhwIjoxNzQzMDMxNTEyfQ.7cBCdghd7HGWFo71N93hG5yZEszWRgXQzFDKQNyzTbE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaZW5kMyIsImlhdCI6MTc0NDY0MzQxNSwiZXhwIjoxNzQ0NjQ0MDE1fQ.vIMC-mOW-MmuCbXgYlhW99nhnxPB5VHYTFru2WHEVmw
 
 ### Get /transactions/{id} get transaction by id=1
 GET http://localhost:8082/transactions/1
@@ -53,33 +53,33 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxO
 ### GET /transactions/filter get transactions by filter
 GET http://localhost:8082/transactions/filter?page=0&size=100&location=Singapura
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQyMDU5MjQzLCJleHAiOjE3NDI0MTkyNDN9.elKZxXYNjl0dokTX0CFz3Pxu8BsHdKlHMdMO1Hm3_94
+
+
 ### GET /transactions/filter get transactions by filter
 GET http://localhost:8082/transactions/filter?page=0&size=100&location=Singapura&amount=300
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
+
+
 ### GET /transactions/filter get transactions by filter
 GET http://localhost:8082/transactions/filter?location=Singapura&amount=300&page=0&size=134
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQwNjgyMDQ0LCJleHAiOjE3NDA2ODU2NDR9.ot-dIAZiwCmBBlUbw4XKLNuEOYqgTiV-gR47eCQTMx4
 
 ### POST /transactions/check-fraud check fraud
 POST http://localhost:8082/transactions/check-fraud
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxNzAyNjgzLCJleHAiOjE3NDE3MDYyODN9.uoxoKPwLAY0-B5Tnbrbxu8RK7Pm2iyp4YJcChiX1Gro
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaZW5kMyIsImlhdCI6MTc0NDY0NDIzOCwiZXhwIjoxNzQ0NjQ0ODM4fQ.NuRvt7X5U-aO1jb5mqlBLooGjS0uP_5r2AcvyhlSsj8
 Content-Type: application/json
 
 {
-  "id": 4687,
-  "step": 0,
-  "transactionType": "PAYMENT",
-  "amount": 522.91,
-  "initiator": "4657574490191964",
-  "oldBalInitiator": 208468.68,
-  "newBalInitiator": 207945.77,
-  "recipient": "66-0007049",
-  "oldBalRecipient": 606.38,
-  "newBalRecipient": 1129.29,
-  "isFraud": false,
-  "location": "Recife",
-  "transactionDate": "2025-02-21T12:52:50.654341",
-  "currency": "JPY"
+    "id": 30,
+    "step": 0,
+    "transactionType": "PAYMENT",
+    "amount": 1167.99,
+    "initiator": "4065896759858389",
+    "recipient": "66-0002397",
+    "isFraud": false,
+    "location": "Seul",
+    "transactionDate": "2024-09-14T03:00:43.29947",
+    "currency": "SGD"
 }
 
 ### POST /users/register register a user
@@ -111,3 +111,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxN
 DELETE http://localhost:8082/users/0
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5icmFuIiwiaWF0IjoxNzQxOTY1MDQ3LCJleHAiOjE3NDIzMjUwNDd9.1WcWdyF-mFpU2EQZte0Cm-H5kQ8yaNhxFV_iHHAirR0
 
+
+### POST /auth/login login
+POST http://localhost:8082/auth/login
+Content-Type: application/x-www-form-urlencoded
+
+username=Zend3&password=duna2
+
+### Get /pubsub/pub
+GET http://localhost:8082/test-pubsub/pub
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaZW5kMyIsImlhdCI6MTc0NDQwNzgwNSwiZXhwIjoxNzQ0NDA4NDA1fQ.PFAxW87brRkSDWFYnwB4RP_--_DqVfMNhmyUcAvT_js
+
+### GET /pubsub/sub
+GET http://localhost:8082/test-pubsub/sub
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaZW5kMyIsImlhdCI6MTc0MzQ2MTgwMCwiZXhwIjoxNzQzNDYyNDAwfQ.arVMY6tutnUN3OuPwqWpsUrEaMZsoqAkwUoe6_Etuik

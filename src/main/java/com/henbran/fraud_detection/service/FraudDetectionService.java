@@ -2,6 +2,7 @@ package com.henbran.fraud_detection.service;
 
 import com.henbran.fraud_detection.entity.Transaction;
 import com.henbran.fraud_detection.repository.TransactionRepository;
+import com.henbran.fraud_detection.utils.Constants;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -25,6 +26,14 @@ public class FraudDetectionService {
 
     public Boolean isFraudulent(Transaction transaction) {
         log.info("Executando detecção de fraude para a transação: {}", transaction.getId());
+        boolean isFraud = isHighAmount(transaction) ||
+                          isHighFrequency(transaction) ||
+                          isUnusualLocation(transaction) ||
+                          isDifferentCurrency(transaction);
+
+        if(isFraud){
+            RedisPublisherService.publish(Constants.REDIS_CHANNEL_STRING, Constants.FRAUD_DETECTED_STRING);
+        }
         return isHighAmount(transaction) ||
                 isHighFrequency(transaction) ||
                 isUnusualLocation(transaction) ||
