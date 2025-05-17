@@ -1,30 +1,31 @@
-2025-04-14 12:08:07 - c.h.f.FraudDetectionApplication - Starting FraudDetectionApplication using Java 21.0.6 with PID 13917 (/home/bhman/dev/fraud_detection/target/classes started by bhman in /home/bhman/dev/fraud_detection)
-2025-04-14 12:08:07 - c.h.f.FraudDetectionApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-14 12:08:07 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-04-14 12:08:07 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-04-14 12:08:08 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2025-04-14 12:08:08 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-04-14 12:08:08 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 2 JPA repository interfaces.
-2025-04-14 12:08:08 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2025-04-14 12:08:08 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-04-14 12:08:08 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-04-14 12:08:08 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-04-14 12:08:08 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
-2025-04-14 12:08:09 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
-2025-04-14 12:08:09 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
-2025-04-14 12:08:09 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-14 12:08:09 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2025-04-14 12:08:09 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-14 12:08:09 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1512 ms
-2025-04-14 12:08:09 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-04-14 12:08:09 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
-2025-04-14 12:08:09 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-04-14 12:08:10 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-04-14 12:08:10 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-04-14 12:08:10 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@10a755d6
-2025-04-14 12:08:10 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-04-14 12:08:10 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-04-14 12:08:10 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-05-16 17:26:45 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 17:26:45 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 53835 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 17:26:45 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 17:26:46 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 17:26:46 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 17:26:46 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 2 JPA repository interfaces.
+2025-05-16 17:26:46 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 17:26:46 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 17:26:46 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 17:26:46 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 17:26:46 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-05-16 17:26:47 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 17:26:47 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 17:26:47 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 17:26:47 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 17:26:47 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 17:26:48 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@69374e28
+2025-05-16 17:26:48 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 17:26:48 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 17:26:48 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 16.8
@@ -32,43 +33,1070 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-04-14 12:08:11 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-04-14 12:08:11 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-04-14 12:08:11 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-04-14 12:08:11 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-04-14 12:08:11 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+2025-05-16 17:26:48 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 17:26:48 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 17:26:48 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 17:26:49 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 17:26:49 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
 
-Using generated security password: 2ca2930f-316b-439f-8a3e-cd23c6353600
+Using generated security password: 66b479ba-f93f-46f6-9fe5-d1d60078afff
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-04-14 12:08:11 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-04-14 12:08:12 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
-2025-04-14 12:08:12 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-04-14 12:08:12 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
-2025-04-14 12:08:12 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
-2025-04-14 12:08:12 - c.h.f.FraudDetectionApplication - Started FraudDetectionApplication in 5.388 seconds (process running for 5.959)
-2025-04-14 12:08:12 - c.h.f.FraudDetectionApplication - API Fraud Detection iniciada com sucesso!
-2025-04-14 12:08:13 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-14 12:08:13 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-04-14 12:08:13 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-04-14 12:10:15 - c.h.f.controller.AuthController - Iniciando login do úsuario: Zend3
-2025-04-14 12:10:15 - c.h.f.controller.AuthController - Login realizado com sucesso
-2025-04-14 12:10:27 - c.h.f.c.TransactionController - Buscando todas as transações
-2025-04-14 12:10:41 - c.h.f.c.TransactionController - Buscando todas as transações
-2025-04-14 12:10:43 - c.h.f.c.TransactionController - Buscando todas as transações
-2025-04-14 12:11:36 - c.h.f.c.TransactionController - Verificando transação com id 30
-2025-04-14 12:11:36 - c.h.f.service.FraudDetectionService - Executando detecção de fraude para a transação: 30
-2025-04-14 12:12:20 - c.h.f.c.TransactionController - Verificando transação com id 30
-2025-04-14 12:12:20 - c.h.f.service.FraudDetectionService - Executando detecção de fraude para a transação: 30
-2025-04-14 12:17:04 - c.h.f.c.TransactionController - Verificando transação com id 30
-2025-04-14 12:17:04 - c.h.f.service.FraudDetectionService - Executando detecção de fraude para a transação: 30
-2025-04-14 12:23:58 - c.h.f.controller.AuthController - Iniciando login do úsuario: Zend3
-2025-04-14 12:23:58 - c.h.f.controller.AuthController - Login realizado com sucesso
-2025-04-14 12:24:22 - c.h.f.c.TransactionController - Verificando transação com id 30
-2025-04-14 12:24:22 - c.h.f.service.FraudDetectionService - Executando detecção de fraude para a transação: 30
-2025-04-14 12:24:58 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-14 12:24:58 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-04-14 12:24:58 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-04-14 12:24:58 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-04-14 12:24:58 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 17:26:49 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 17:26:49 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 17:26:50 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 17:26:50 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 17:26:50 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 17:26:50 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.714 seconds (process running for 5.414)
+2025-05-16 17:26:50 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 17:26:50 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 17:26:50 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 17:26:50 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 17:26:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 17:26:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 17:35:29 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 17:35:29 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 57736 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 17:35:29 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 17:35:30 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 17:35:30 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 17:35:30 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2025-05-16 17:35:30 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 17:35:30 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 17:35:30 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 17:35:30 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 17:35:30 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-05-16 17:35:31 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 17:35:31 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 17:35:31 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 17:35:31 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 17:35:31 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 17:35:32 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39c93af6
+2025-05-16 17:35:32 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 17:35:32 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 17:35:32 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 17:35:32 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 17:35:32 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 17:35:32 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 17:35:33 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 17:35:33 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 64a8560c-7c3e-4ccd-bee9-8a398ecf44db
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 17:35:33 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 17:35:33 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 17:35:34 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 17:35:34 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 17:35:34 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 17:35:34 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.711 seconds (process running for 5.404)
+2025-05-16 17:35:34 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 17:35:34 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 17:35:34 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 17:35:34 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 17:35:34 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 17:35:34 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 17:40:53 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 17:40:53 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 60407 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 17:40:53 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 17:40:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 17:40:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 17:40:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2025-05-16 17:40:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 17:40:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 17:40:54 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 17:40:54 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 17:40:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-05-16 17:40:55 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 17:40:55 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 17:40:55 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 17:40:55 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 17:40:55 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 17:40:55 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@72321701
+2025-05-16 17:40:55 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 17:40:55 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 17:40:55 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 17:40:56 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 17:40:56 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 17:40:56 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 17:40:57 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 17:40:57 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: a0330daa-011b-4c17-84cd-5b7da260363e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 17:40:57 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 17:40:57 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 17:40:57 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 17:40:57 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 17:40:57 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 17:40:58 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.655 seconds (process running for 5.37)
+2025-05-16 17:40:58 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 17:40:58 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 17:40:58 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 17:40:58 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 17:40:58 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 17:40:58 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 18:04:42 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 18:04:42 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 71077 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 18:04:42 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 18:04:43 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 18:04:43 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 18:04:43 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+2025-05-16 18:04:43 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 18:04:43 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 18:04:43 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 18:04:43 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 18:04:43 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-05-16 18:04:45 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 18:04:45 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 18:04:45 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 18:04:45 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 18:04:45 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 18:04:45 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c6653e
+2025-05-16 18:04:45 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 18:04:45 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 18:04:45 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 18:04:45 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 18:04:46 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 18:04:46 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 18:04:46 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 18:04:46 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 2428f89d-7f62-4f30-8c18-5d0b781b61fb
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 18:04:46 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 18:04:46 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 18:04:46 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 18:04:46 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 18:04:46 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 18:04:47 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.535 seconds (process running for 6.07)
+2025-05-16 18:04:47 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 18:04:47 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 18:04:47 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 18:04:47 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 18:04:47 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 18:04:47 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 18:04:47 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 18:05:46 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 18:05:46 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 71715 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 18:05:46 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 18:05:47 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 18:05:47 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 18:05:47 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
+2025-05-16 18:05:47 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 18:05:47 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 18:05:47 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 18:05:47 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 18:05:47 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-05-16 18:05:48 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 18:05:48 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 18:05:48 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 18:05:48 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 18:05:48 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 18:05:49 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3903cfc9
+2025-05-16 18:05:49 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 18:05:49 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 18:05:49 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 18:05:48 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 18:05:48 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 18:05:49 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 18:05:49 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 18:05:49 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 6d4fdeb2-bd1e-44f9-9126-6be865a6aba0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 18:05:49 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 18:05:49 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 18:05:50 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 18:05:50 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 18:05:50 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 18:05:50 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 3.868 seconds (process running for 5.287)
+2025-05-16 18:05:50 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 18:05:50 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 18:05:50 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 18:05:50 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 18:05:50 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 18:05:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 18:05:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 18:12:50 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 18:12:50 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 75071 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 18:12:50 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 18:12:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 18:12:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 18:12:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2025-05-16 18:12:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 18:12:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 18:12:50 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 18:12:50 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 18:12:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-05-16 18:12:51 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 18:12:51 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 18:12:51 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 18:12:52 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 18:12:52 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 18:12:52 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@288e50c1
+2025-05-16 18:12:52 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 18:12:52 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 18:12:52 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 18:12:52 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 18:12:52 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 18:12:52 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 18:12:53 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 18:12:53 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 084c231b-a2e9-4102-ae46-72e33f891b25
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 18:12:53 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 18:12:53 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 18:12:54 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 18:12:54 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 18:12:54 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-05-16 18:12:54 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.623 seconds (process running for 5.287)
+2025-05-16 18:12:54 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 18:12:54 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 18:12:54 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 18:12:54 - c.h.f.controller.UserController - Buscando usuário com id: 999
+2025-05-16 18:12:54 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 18:12:54 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 18:12:54 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 18:12:54 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 20:25:50 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 20:25:50 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 132151 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 20:25:50 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 20:25:51 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:25:51 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 20:25:51 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+2025-05-16 20:25:51 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:25:51 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 20:25:51 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:25:51 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:25:51 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-05-16 20:25:52 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 20:25:52 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 20:25:52 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 20:25:53 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 20:25:53 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 20:25:53 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@435e224d
+2025-05-16 20:25:53 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 20:25:53 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 20:25:53 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 20:25:53 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 20:25:53 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:25:54 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 20:25:54 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 20:25:54 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1f414498-afa9-4de9-9d49-7f262bd87671
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 20:25:54 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 20:25:55 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 20:25:55 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 20:25:55 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 20:25:55 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-05-16 20:25:55 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 5.17 seconds (process running for 5.918)
+2025-05-16 20:25:55 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 20:25:55 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 20:25:55 - c.h.f.controller.UserController - Deletando usuário com id: 1
+2025-05-16 20:25:55 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 20:25:55 - c.h.f.controller.UserController - Buscando usuário com id: 999
+2025-05-16 20:25:55 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 20:25:55 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:25:55 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 20:25:55 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 20:26:21 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 20:26:21 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 132534 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 20:26:21 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 20:26:22 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:26:22 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 20:26:22 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2025-05-16 20:26:22 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:26:22 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 20:26:22 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:26:22 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:26:22 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-05-16 20:26:23 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 20:26:23 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 20:26:23 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 20:26:23 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 20:26:23 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 20:26:24 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@288e50c1
+2025-05-16 20:26:24 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 20:26:24 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 20:26:24 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 20:26:24 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 20:26:24 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:26:24 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 20:26:25 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 20:26:25 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 11323aa0-060a-445b-a130-c98d432dff54
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 20:26:25 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 20:26:26 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 20:26:26 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 20:26:26 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 20:26:26 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 20:26:26 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 5.211 seconds (process running for 6.002)
+2025-05-16 20:26:26 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 20:26:26 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 20:26:26 - c.h.f.controller.UserController - Deletando usuário com id: 1
+2025-05-16 20:26:26 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 20:26:27 - c.h.f.controller.UserController - Buscando usuário com id: 999
+2025-05-16 20:26:27 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 20:26:27 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:26:27 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 20:26:27 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 20:33:12 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 20:33:12 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 136011 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 20:33:12 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 20:33:13 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:33:13 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 20:33:13 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
+2025-05-16 20:33:13 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:33:13 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 20:33:13 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:33:13 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:33:13 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-05-16 20:33:14 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 20:33:14 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 20:33:14 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 20:33:14 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 20:33:14 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 20:33:14 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3e8eea59
+2025-05-16 20:33:14 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 20:33:14 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 20:33:14 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 20:33:15 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 20:33:15 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:33:15 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 20:33:16 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 20:33:16 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: bfd5912e-1455-477d-82ce-8a8c8f0e2e27
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 20:33:16 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 20:33:16 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 20:33:16 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 20:33:16 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 20:33:16 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 20:33:16 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.822 seconds (process running for 5.537)
+2025-05-16 20:33:17 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 20:33:17 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 20:33:17 - c.h.f.controller.UserController - Deletando usuário com id: 1
+2025-05-16 20:33:17 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 20:33:17 - c.h.f.controller.UserController - Buscando usuário com id: 999
+2025-05-16 20:33:17 - c.h.f.e.h.TransactionExceptionHandler - TransactionController -- IllegalArgumentException: For input string: "null"
+2025-05-16 20:33:17 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 20:33:17 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:33:17 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 20:33:17 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 20:35:58 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 20:35:58 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 137411 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 20:35:58 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 20:35:58 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:35:58 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 20:35:58 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 2 JPA repository interfaces.
+2025-05-16 20:35:58 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:35:58 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 20:35:58 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:35:58 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:35:58 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-05-16 20:36:00 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 20:36:00 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 20:36:00 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 20:36:00 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 20:36:00 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 20:36:00 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3903cfc9
+2025-05-16 20:36:00 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 20:36:00 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 20:36:00 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 20:36:00 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 20:36:00 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:36:01 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 20:36:01 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 20:36:01 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ad025a3d-2baa-4c78-a676-0276755a9ddf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 20:36:01 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 20:36:02 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 20:36:02 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 20:36:02 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 20:36:02 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 20:36:02 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.85 seconds (process running for 5.605)
+2025-05-16 20:36:02 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 20:36:02 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 20:36:02 - c.h.f.controller.UserController - Deletando usuário com id: 1
+2025-05-16 20:36:02 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 20:36:02 - c.h.f.controller.UserController - Buscando usuário com id: 999
+2025-05-16 20:36:02 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 20:36:02 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:36:02 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 20:36:02 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 20:39:56 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 20:39:56 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 139489 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 20:39:56 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 20:39:57 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:39:57 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 20:39:57 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 2 JPA repository interfaces.
+2025-05-16 20:39:57 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:39:57 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 20:39:57 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:39:57 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:39:57 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2025-05-16 20:39:58 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 20:39:58 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 20:39:58 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 20:39:58 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 20:39:58 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 20:39:59 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3903cfc9
+2025-05-16 20:39:59 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 20:39:59 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 20:39:59 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 20:39:59 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 20:39:59 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:39:59 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 20:40:00 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 20:40:00 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: e177831c-60ed-4519-83a9-1a1afbe72084
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 20:40:00 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 20:40:00 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 20:40:01 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 20:40:01 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 20:40:01 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 20:40:01 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.775 seconds (process running for 5.447)
+2025-05-16 20:40:00 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 20:40:00 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 20:40:00 - c.h.f.controller.UserController - Deletando usuário com id: 1
+2025-05-16 20:40:00 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 20:40:00 - c.h.f.controller.UserController - Buscando usuário com id: 999
+2025-05-16 20:40:00 - c.h.f.e.h.TransactionExceptionHandler - TransactionController -- IllegalArgumentException: For input string: "null"
+2025-05-16 20:40:00 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 20:40:00 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:40:01 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 20:40:01 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 20:40:26 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 20:40:26 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 139893 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 20:40:26 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 20:40:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:40:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 20:40:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2025-05-16 20:40:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:40:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 20:40:27 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:40:27 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:40:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-05-16 20:40:28 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 20:40:28 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 20:40:28 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 20:40:28 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 20:40:28 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 20:40:28 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7b1b1784
+2025-05-16 20:40:28 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 20:40:29 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 20:40:29 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 20:40:29 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 20:40:29 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:40:29 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 20:40:30 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 20:40:30 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 53930c31-cd01-499b-9bca-95f4e931d1fd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 20:40:30 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 20:40:30 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 20:40:31 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 20:40:31 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 20:40:31 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 20:40:31 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.787 seconds (process running for 5.456)
+2025-05-16 20:40:31 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 20:40:31 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 20:40:31 - c.h.f.controller.UserController - Deletando usuário com id: 1
+2025-05-16 20:40:31 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 20:40:31 - c.h.f.controller.UserController - Buscando usuário com id: 999
+2025-05-16 20:40:31 - c.h.f.controller.UserController - Deletando usuário com id: 0
+2025-05-16 20:40:31 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 20:40:31 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:40:31 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 20:40:31 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 20:41:27 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 20:41:27 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 140504 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 20:41:27 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 20:41:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:41:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 20:41:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
+2025-05-16 20:41:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:41:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 20:41:27 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:41:27 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:41:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-05-16 20:41:29 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 20:41:29 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 20:41:29 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 20:41:29 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 20:41:29 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 20:41:29 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1fb379e4
+2025-05-16 20:41:29 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 20:41:29 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 20:41:29 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 20:41:30 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 20:41:30 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:41:30 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 20:41:30 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 20:41:30 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 03176223-094e-41f3-9dce-14473a9fa4df
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 20:41:30 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 20:41:31 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 20:41:31 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 20:41:31 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 20:41:31 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-05-16 20:41:31 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.803 seconds (process running for 5.491)
+2025-05-16 20:41:32 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 20:41:32 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 20:41:32 - c.h.f.controller.UserController - Deletando usuário com id: 1
+2025-05-16 20:41:32 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 20:41:32 - c.h.f.controller.UserController - Buscando usuário com id: 999
+2025-05-16 20:41:32 - c.h.f.controller.UserController - Deletando usuário com id: 0
+2025-05-16 20:41:32 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 20:41:32 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:41:32 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 20:41:32 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 20:49:34 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 20:49:34 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 144302 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 20:49:34 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 20:49:35 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:49:35 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 20:49:35 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 2 JPA repository interfaces.
+2025-05-16 20:49:35 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:49:35 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 20:49:35 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:49:35 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:49:35 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-05-16 20:49:36 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 20:49:36 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 20:49:36 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 20:49:36 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 20:49:36 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 20:49:36 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3903cfc9
+2025-05-16 20:49:36 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 20:49:36 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 20:49:36 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 20:49:37 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 20:49:37 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:49:37 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 20:49:38 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 20:49:38 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 84453227-6040-46ed-bc6c-3f51ccf1e1b8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 20:49:38 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 20:49:38 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 20:49:39 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 20:49:39 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 20:49:39 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 20:49:39 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.756 seconds (process running for 5.394)
+2025-05-16 20:49:39 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 20:49:39 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 20:49:39 - c.h.f.controller.UserController - Deletando usuário com id: 1
+2025-05-16 20:49:39 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 20:49:39 - c.h.f.controller.UserController - Buscando usuário com id: 999
+2025-05-16 20:49:39 - c.h.f.controller.UserController - Deletando usuário com id: 0
+2025-05-16 20:49:39 - c.h.f.e.h.TransactionExceptionHandler - TransactionController -- IllegalArgumentException: null
+2025-05-16 20:49:39 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 20:49:39 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:49:39 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 20:49:39 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 20:51:53 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 20:51:53 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 145473 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 20:51:53 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 20:51:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:51:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 20:51:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
+2025-05-16 20:51:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:51:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 20:51:54 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:51:54 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:51:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-05-16 20:51:55 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 20:51:55 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 20:51:55 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 20:51:55 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 20:51:55 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 20:51:55 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3903cfc9
+2025-05-16 20:51:55 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 20:51:55 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 20:51:55 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 20:51:56 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 20:51:56 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:51:56 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 20:51:57 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 20:51:57 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 2b8d8d5e-db9d-4dce-acc1-ceb0124ddfc8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 20:51:57 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 20:51:57 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 20:51:58 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 20:51:58 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 20:51:58 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 20:51:58 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.744 seconds (process running for 5.458)
+2025-05-16 20:51:58 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 20:51:58 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 20:51:58 - c.h.f.controller.UserController - Deletando usuário com id: 1
+2025-05-16 20:51:58 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 20:51:58 - c.h.f.controller.UserController - Buscando usuário com id: 999
+2025-05-16 20:51:58 - c.h.f.controller.UserController - Deletando usuário com id: 0
+2025-05-16 20:51:58 - c.h.f.e.h.TransactionExceptionHandler - TransactionController -- IllegalArgumentException: null
+2025-05-16 20:51:58 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 20:51:58 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:51:58 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 20:51:58 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 20:58:48 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 20:58:48 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 148680 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 20:58:48 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 20:58:48 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:58:48 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 20:58:48 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2025-05-16 20:58:48 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:58:48 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 20:58:48 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:58:48 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:58:48 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-05-16 20:58:49 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 20:58:49 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 20:58:49 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 20:58:50 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 20:58:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 20:58:50 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7b1b1784
+2025-05-16 20:58:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 20:58:50 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 20:58:50 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 20:58:50 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 20:58:50 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:58:51 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 20:58:51 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 20:58:51 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 47a7ad08-7db3-411d-9b25-e208297ba11a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 20:58:51 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 20:58:52 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 20:58:52 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 20:58:52 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 20:58:52 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-05-16 20:58:52 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.86 seconds (process running for 5.584)
+2025-05-16 20:58:52 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 20:58:52 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 20:58:52 - c.h.f.controller.UserController - Deletando usuário com id: 1
+2025-05-16 20:58:52 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 20:58:52 - c.h.f.controller.UserController - Buscando usuário com id: 999
+2025-05-16 20:58:52 - c.h.f.controller.UserController - Deletando usuário com id: 0
+2025-05-16 20:58:52 - c.h.f.e.h.TransactionExceptionHandler - TransactionController -- IllegalArgumentException: User not found!
+2025-05-16 20:58:52 - o.s.test.context.TestContextManager - Caught exception while invoking 'afterTestMethod' callback on TestExecutionListener [org.springframework.test.context.bean.override.mockito.MockitoResetTestExecutionListener] for test method [public void com.henbran.fraud_detection.controller.UserControllerTest.shouldReturnBadRequestWhenUserDoesNotExists() throws java.lang.Exception] and test instance [com.henbran.fraud_detection.controller.UserControllerTest@122a6bac]
+org.mockito.exceptions.misusing.InvalidUseOfMatchersException: 
+Misplaced or misused argument matcher detected here:
+
+-> at com.henbran.fraud_detection.controller.UserControllerTest.shouldReturnBadRequestWhenUserDoesNotExists(UserControllerTest.java:168)
+
+You cannot use argument matchers outside of verification or stubbing.
+Examples of correct usage of argument matchers:
+    when(mock.get(anyInt())).thenReturn(null);
+    doThrow(new RuntimeException()).when(mock).someVoidMethod(any());
+    verify(mock).someMethod(contains("foo"))
+
+This message may appear after an NullPointerException if the last matcher is returning an object 
+like any() but the stubbed method signature expect a primitive argument, in this case,
+use primitive alternatives.
+    when(mock.get(any())); // bad use, will raise NPE
+    when(mock.get(anyInt())); // correct usage use
+
+Also, this error might show up because you use argument matchers with methods that cannot be mocked.
+Following methods *cannot* be stubbed/verified: final/private/equals()/hashCode().
+Mocking methods declared on non-public parent classes is not supported.
+
+	at org.springframework.test.context.bean.override.mockito.MockitoResetTestExecutionListener.resetMocks(MockitoResetTestExecutionListener.java:114)
+	at org.springframework.test.context.bean.override.mockito.MockitoResetTestExecutionListener.resetMocks(MockitoResetTestExecutionListener.java:101)
+	at org.springframework.test.context.bean.override.mockito.MockitoResetTestExecutionListener.afterTestMethod(MockitoResetTestExecutionListener.java:94)
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:487)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.afterEach(SpringExtension.java:275)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$13(TestMethodTestDescriptor.java:260)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$15(TestMethodTestDescriptor.java:276)
+	at org.junit.platform.commons.util.CollectionUtils.forEachInReverseOrder(CollectionUtils.java:244)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2025-05-16 20:58:52 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 20:58:52 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:58:52 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 20:58:52 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-16 20:59:49 - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/bhman/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/bhman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-05-16 20:59:49 - c.h.f.controller.UserControllerTest - Starting UserControllerTest using Java 21.0.7 with PID 149299 (started by bhman in /home/bhman/dev/fraud_detection)
+2025-05-16 20:59:49 - c.h.f.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 20:59:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:59:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 20:59:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
+2025-05-16 20:59:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-16 20:59:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-16 20:59:50 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:59:50 - o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.henbran.fraud_detection.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-05-16 20:59:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-05-16 20:59:51 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 20:59:51 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-16 20:59:51 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 20:59:51 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 20:59:51 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 20:59:52 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3903cfc9
+2025-05-16 20:59:52 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 20:59:52 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 20:59:52 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 20:59:52 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 20:59:52 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:59:52 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16 20:59:53 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 20:59:53 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b9b7f6b0-a84e-4e9c-a6db-dbe3909d13dc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 20:59:53 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-16 20:59:53 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-16 20:59:54 - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-05-16 20:59:54 - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-05-16 20:59:54 - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-05-16 20:59:54 - c.h.f.controller.UserControllerTest - Started UserControllerTest in 4.713 seconds (process running for 5.408)
+2025-05-16 20:59:54 - c.h.f.controller.UserController - Criando novo usuário
+2025-05-16 20:59:54 - c.h.f.controller.UserController - Usuário criado com sucesso
+2025-05-16 20:59:54 - c.h.f.controller.UserController - Deletando usuário com id: 1
+2025-05-16 20:59:54 - c.h.f.controller.UserController - Buscando todos os usuários
+2025-05-16 20:59:54 - c.h.f.controller.UserController - Buscando usuário com id: 999
+2025-05-16 20:59:54 - c.h.f.controller.UserController - Deletando usuário com id: 0
+2025-05-16 20:59:54 - c.h.f.e.h.TransactionExceptionHandler - TransactionController -- IllegalArgumentException: User not found!
+2025-05-16 20:59:54 - c.h.f.controller.UserController - Buscando usuário com id: 1
+2025-05-16 20:59:54 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 20:59:54 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 20:59:54 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

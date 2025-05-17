@@ -1,6 +1,7 @@
 package com.henbran.fraud_detection.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -65,4 +66,5 @@ public class UserService {
             user.getUsername() != null && 
             user.getPassword() != null;
     }
+
 }

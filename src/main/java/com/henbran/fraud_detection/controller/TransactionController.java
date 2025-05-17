@@ -97,7 +97,7 @@ public class TransactionController {
 
     @DeleteMapping("/{id}")
     public void deleteTransaction(@PathVariable(required = true) Long id) {
-        log.info("Deletando transação xom id: {}", id);
+        log.info("Deletando transação com id: {}", id);
         transactionService.deleteTransaction(id);
     }
 

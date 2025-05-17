@@ -76,9 +76,9 @@ public class UserController {
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteUser(@PathVariable Long id){
         log.info("Deletando usuário com id: {}", id);
-        if(id == null){
-            throw new IllegalArgumentException(Constants.ID_NOT_NULL_STRING);
-        }
+        // if(id == null){
+        //     throw new IllegalArgumentException(Constants.ID_NOT_NULL_STRING);
+        // }
         String response = userService.deleteUser(id);
         return ResponseEntity.ok(response);
     }
